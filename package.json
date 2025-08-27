@@ -1,0 +1,37 @@
+{
+  "name": "engineering-journal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && pagefind --site .next/server/app --output-path public/_pagefind",
+    "preview": "next start",
+    "format": "prettier --check --cache .",
+    "format:fix": "prettier --write --cache .",
+    "clean": "rm -rf .next",
+    "prepare": "is-ci || lefthook install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "next": "^15.5.2",
+    "nextra": "^4.4.0",
+    "nextra-theme-docs": "^4.4.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^15.5.2",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "gitzy": "^5.9.0",
+    "is-ci": "^4.1.0",
+    "lefthook": "^1.12.3",
+    "pagefind": "^1.3.0",
+    "prettier": "^3.6.2"
+  }
+}
