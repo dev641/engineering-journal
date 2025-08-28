@@ -1,6 +1,6 @@
 import { generateStaticParamsFor, importPage } from "nextra/pages";
 import { useMDXComponents as getMDXComponents } from "../../mdx-components";
-import { PageProps } from "src/types/types";
+import { PageProps } from "@/.next/types/app/[[...mdxPath]]/page";
 export const generateStaticParams = generateStaticParamsFor("mdxPath");
 
 export async function generateMetadata(props: PageProps) {
