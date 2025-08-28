@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build && pagefind --site .next/server/app --output-path public/_pagefind",
     "preview": "next start",
     "format": "prettier --check --cache .",
