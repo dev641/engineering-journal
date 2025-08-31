@@ -3,13 +3,13 @@ export default {
     title: "Home",
     theme: {
       typesetting: "article",
-      //   type: "page",
     },
   },
   _templates: {
+    title: "Templates", // required (even if hidden)
     display: "hidden",
     theme: {
-      pagination: false, // hides from prev/next
+      pagination: false,
     },
   },
 };
