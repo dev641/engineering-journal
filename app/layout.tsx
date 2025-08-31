@@ -27,9 +27,12 @@ export default async function RootLayout({
   );
   const footer = (
     <Footer style={{ textAlign: "center" }}>
-      {new Date().getFullYear()} © Engineering Journal.
+      <div style={{ width: "100%", textAlign: "center" }}>
+        {new Date().getFullYear()} © Engineering Journal.
+      </div>
     </Footer>
   );
+
   return (
     <html lang='en' dir='ltr' suppressHydrationWarning>
       <Head>{/* Additional <meta> tags etc. */}</Head>
