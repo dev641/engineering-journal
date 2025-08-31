@@ -15,28 +15,30 @@ export default async function RootLayout({
 }) {
   const pageMap = await getPageMap();
   const banner = (
-    <Banner storageKey="engineering-journal-banner">
+    <Banner storageKey='engineering-journal-banner'>
       Welcome to Engineering Journal 🎉
     </Banner>
   );
   const navbar = (
     <Navbar
       logo={<b>Engineering Journal</b>}
-      projectLink="https://github.com/dev641/engineering-journal"
+      projectLink='https://github.com/dev641/engineering-journal'
     />
   );
   const footer = (
-    <Footer>{new Date().getFullYear()} © Engineering Journal.</Footer>
+    <Footer style={{ textAlign: "center" }}>
+      {new Date().getFullYear()} © Engineering Journal.
+    </Footer>
   );
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html lang='en' dir='ltr' suppressHydrationWarning>
       <Head>{/* Additional <meta> tags etc. */}</Head>
       <body>
         <Layout
           banner={banner}
           navbar={navbar}
           pageMap={pageMap}
-          docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
+          docsRepositoryBase='https://github.com/shuding/nextra/tree/main/docs'
           footer={footer}
         >
           {children}
