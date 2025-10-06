@@ -1,0 +1,73 @@
+---
+created: 2025-08-31 22:49
+modified: 2025-08-31 22:49
+category:
+topic: abstract-class
+tags:
+  - java
+  - class
+summary: An abstract class is a class that cannot be instantiated. It is used as a base class and may contains one or more abstract methods (method without implementation).
+---
+
+# Abstract Class
+
+## Definition
+
+An Abstract class in java is a class declarad with the `abstract` keyword. It cannot be instantiated directly and is used to achieve partial abstraction by combining abstract methods (without implementation) and concrete methods (with implementation).
+
+## Detailed Explanation
+
+- Abstract classes allow **0-100%** abstraction.
+  - They can have only abstract mthods (100% abstraction).
+  - They can also have mix of abstract and concrete methods.
+- A concrete sub classes that extends an abstract class must provide implementation of all the inherited abstract methods.
+- Abstract classes are extended (not implemented) by subclasses, using the `extends` keyword.
+- Objects cannot be created directly from an abstract class (`new` is not allowed).
+- Abstract class references, however, can store instances of sub classes.
+- Abstract classes support constructors, fields, and access modifiers just like normal classes.
+
+## Code Example
+
+```
+// Abstract base class
+abstract class Car {
+	abstract void applyBrakes(); // Abstract method (No implementation)
+	void accerate() {
+		System.out.println("Car is accelerating...");
+	}
+}
+
+// Concreate subclass 
+class Audi extends Car {
+	@Override
+	void applyBrakes () {
+		System.out.println("Audi brake applied!!...");
+	}
+	
+	public static void main(String[] args) {
+		// Car myCar = new Car(); // ❌Not Allowed
+		Car myCar = new Audi(); // ✅ Allowed: reference of abstract, object of concrete
+		myCar.accelerate();
+		myCar.applyBrakes();
+		
+	}
+}
+```
+
+## Real-World Use Cases
+
+- **Framework Base Classes**: Many frameworks (like Spring or Android SDK) use abstract base classes that provide default implementation for common metgods and enforce subclasses to implement specific methods. 
+- **Example**: `HttpServlet` in Java EE - developers extends it and implement only the method needed (`doGet`,`doPost`).
+
+## Key Takeaways
+
+- Declared with `abstract` keyword.
+- Cannot be instantiated.
+- Achieve **partial abstraction**.
+- Subclasses must implement all abstract methods
+- Abstract references can store subclass objects.
+
+## Related Notes
+
+- [Java Docs: Abstract Classes](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
+- [Note: Concrete Classes](concrete-class)
