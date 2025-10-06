@@ -7,9 +7,12 @@ topic: Concrete Class
 tags:
   - java
   - class
+  - core-class
 summary: A concrete class is a class that can be instantiated using new keyword. All its methods must have complete implementations.
 ---
+
 #Java
+
 # Concrete Class
 
 ## Definition
@@ -22,8 +25,8 @@ A concrete class is a class that can be instantiated using `new` keyword. All it
 - You can create objects of concrete class directly (`new ClassName()`)
 - It can implement interfaces or extends abstract classes, but must provide implementations for all inherited abstract methods.
 - In java, Concrete classes can have two access levels:
-	- `public` -> accessible from anywhere.
-	- `default` (package-private) -> accessible only within the same package.  
+  - `public` -> accessible from anywhere.
+  - `default` (package-private) -> accessible only within the same package.
 
 ## Code Example
 
@@ -31,15 +34,15 @@ A concrete class is a class that can be instantiated using `new` keyword. All it
 // Example 1: Simple Concrete Class
 public class Person {
 	private String name;
-	
+
 	public Person(String name) {
 		this.name = name;
 	}
-	
+
 	public void display() {
 		System.out.println("Name:" + name);
 	}
-	
+
 	public static void main(String[] args) {
 		Person person = new Person("Devashish");
 		person.display();
@@ -57,14 +60,15 @@ class Rectangle extends Shape {
 	public void draw() {
 		System.out.println("Drawing a Rectangle");
 	}
-	
+
 	public static void main(String[] args) {
 		Rectangle rect = new Rectangle();
 		rect.draw();
 	}
-	
+
 }
 ```
+
 ## Real-World Use Cases
 
 - **Modal Classes in Applications**:
