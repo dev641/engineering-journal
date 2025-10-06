@@ -7,9 +7,9 @@ topic: Concrete Class
 tags:
   - java
   - class
+  - core-class
 summary: A concrete class is a class that can be instantiated using new keyword. All its methods must have complete implementations.
 ---
-#Java
 # Concrete Class
 
 ## Definition
@@ -79,6 +79,6 @@ class Rectangle extends Shape {
 - Supports **inheritance** from abstract classes or interfaces.
 - Acces level can only be public or default (package-private).
 
-## Related Notes
+## Related Links
 
 - [Java Docs: Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html)

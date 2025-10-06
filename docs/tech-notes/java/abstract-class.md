@@ -6,6 +6,7 @@ topic: abstract-class
 tags:
   - java
   - class
+  - core-class
 summary: An abstract class is a class that cannot be instantiated. It is used as a base class and may contains one or more abstract methods (method without implementation).
 ---
 
@@ -28,7 +29,7 @@ An Abstract class in java is a class declarad with the `abstract` keyword. It ca
 
 ## Code Example
 
-```
+```java
 // Abstract base class
 abstract class Car {
 	abstract void applyBrakes(); // Abstract method (No implementation)
@@ -67,7 +68,7 @@ class Audi extends Car {
 - Subclasses must implement all abstract methods
 - Abstract references can store subclass objects.
 
-## Related Notes
+## Related Links
 
 - [Java Docs: Abstract Classes](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
 - [Note: Concrete Classes](concrete-class)
