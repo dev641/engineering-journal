@@ -1,0 +1,83 @@
+---
+created: 2025-10-06 15:57
+modified: 2025-10-06 15:57
+category:
+  - java
+topic: superclass-and-subclass
+tags:
+  - class
+  - java
+  - core-class
+summary: A superclass is a parent class whose properties and methods are inherited by other classes, while a subclass (child class) extends that superclass to reuse, modify, or add new functionality. In Java, if a class doesn't explicitly extends another class, it implicitly extends the `Object` class.
+---
+
+# Superclass and Subclass
+
+## Definition
+
+- A superclass is the base or parent class that provides common fields and methods.
+- A subclass is a class that inherits from another class using the `extends` keywords.
+- The subclass can access ad override non-private members of its superclass.
+
+## Detailed Explanation
+
+- Inheritance allows one class (subclass) to acquire the properties of and behaviors (methods, variables) of another class (superclass).
+- The main purpose of the inheritance is code reuse and hierarchical classification.
+- Java supports single inheritance (a class can extends only one subclass), but a superclass can have multiple subclasses.
+- if a class doesn't explicitly extends any class, it automatically extends the `Object` class - the root of the Java class hierarchy.
+- Every class in Java is directly or indirectly derived from `Object` class.
+  Commonly used `Object` class methods include:
+- `toString()`
+- `equals()`
+- `clone()`
+- `hashCodde`
+- `wait()`/`notify()`/`notifyAll()`
+
+## Code Example
+
+```java
+// Superclass
+class Vehicle {
+	void start() {
+		System.out.println("Vehicle is starting...");
+	}
+}
+
+// Subclass
+class Car extends Vehicle {
+	void honk() {
+		System.out.println("Car is honking...");
+	}
+}
+
+public class Main {
+	Car car = new Car();
+	car.start(); // Inherited method from Vehicle
+	car.honk(); // method from Car
+
+	// Every class indirectly extends object
+	System.out.println(car.toString()); // from Object class
+}
+```
+
+## Real-World Use Cases
+
+- **Hierarchical class Design**:
+  In real-world applications, inheritance helps organize code logically:
+  - `Employee` superclass with subclasses like `Manager`, `Engineer`, `Intern`.
+  - `Shape` superclass with subclasses like `Circle`, `Rectangle` etc.
+- Frameworks and libraries uses inheirtance for base configurations, e.g.
+  - Android's `Activity` and `AppCompatActivity`
+  - Spring's `AnstractController` .
+
+## Key Takeaways
+
+- Subclass inherits properties and methods from its superclass.
+- promotes **code reuse** and **polymorphism**.
+- Java enforces single inheritance (one superclass per class).
+- All classes implicitly extends the `Object` class.
+- The `Object` class provides universal methods like `toString()`,`equals()`,`hashcode()`, `wait()` and `notify()`.
+
+## Related Notes
+
+- [Java Docs: Inheritence:](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
